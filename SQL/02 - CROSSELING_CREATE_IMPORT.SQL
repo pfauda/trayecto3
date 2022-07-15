@@ -1,0 +1,71 @@
+SET 
+    ANSI_NULLS ON
+GO
+SET
+    QUOTED_IDENTIFIER ON
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Import_CROSSELLING]') AND type in (N'U'))
+DROP TABLE [dbo].[Import_CROSSELLING]
+GO
+CREATE TABLE [dbo].[Import_CROSSELLING](
+	[PERIODO] [char](6) NULL,
+	[CUITCLIE] [char](11) NOT NULL,
+	[APEYNOMB] [varchar](150) NULL,
+	[RELACION] [varchar](50) NULL,
+	[TDOCSAPN] [varchar](50) NULL,
+	[TIPOIMPN] [varchar](50) NULL,
+	[NATUJURI] [varchar](50) NULL,
+	[SUCURSAL] [varchar](50) NULL,
+	[BCRASECT] [varchar](50) NULL,
+	[BCRASEGO] [varchar](50) NULL,
+	[GRUPO_CLIENTE] [varchar](50) NULL,
+	[GRUPOGENERAL] [varchar](50) NULL,
+	[SUBGRUPO] [varchar](50) NULL,
+	[SEGMENTO_SUELDOS] [varchar](50) NULL,
+	[SEGMENTO_BANCAS] [varchar](50) NULL,
+	[FUM] [varchar](50) NULL,
+	[ES_CLIENTE] [varchar](50) NULL,
+	[ES_CAPITA] [varchar](50) NULL,
+	[CL_ACTIVO_FUM] [varchar](50) NULL,
+	[TIENE_I_CA_D] [varchar](50) NULL,
+	[TIENE_I_CA_P] [varchar](50) NULL,
+	[TIENE_I_CBESA] [varchar](50) NULL,
+	[TIENE_I_CC] [varchar](50) NULL,
+	[TIENE_I_CCAD] [varchar](50) NULL,
+	[TIENE_I_CS] [varchar](50) NULL,
+	[TIENE_I_FCI] [varchar](50) NULL,
+	[TIENE_I_PF] [varchar](50) NULL,
+	[TIENE_I_PR_HIP] [varchar](50) NULL,
+	[TIENE_I_PR_PERS] [varchar](50) NULL,
+	[TIENE_I_PREP] [varchar](50) NULL,
+	[TIENE_I_SE_PATR] [varchar](50) NULL,
+	[TIENE_I_SEG_VIDA] [varchar](50) NULL,
+	[TIENE_I_VISA] [varchar](50) NULL,
+	[TIENE_I_TJ_SOC] [varchar](50) NULL,
+	[TIENE_E_AC_CC] [varchar](50) NULL,
+	[TIENE_E_CC] [varchar](50) NULL,
+	[TIENE_E_CONV_AH] [varchar](50) NULL,
+	[TIENE_E_CONV_COMALI] [varchar](50) NULL,
+	[TIENE_E_CONV_PP] [varchar](50) NULL,
+	[TIENE_E_CONV_REC] [varchar](50) NULL,
+	[TIENE_E_CX] [varchar](50) NULL,
+	[TIENE_E_FACT] [varchar](50) NULL,
+	[TIENE_E_FCI] [varchar](50) NULL,
+	[TIENE_E_IB] [varchar](50) NULL,
+	[TIENE_E_LIQ_COM] [varchar](50) NULL,
+	[TIENE_E_PF] [varchar](50) NULL,
+	[TIENE_E_PR_CO] [varchar](50) NULL,
+	[TIENE_E_PR_DOC] [varchar](50) NULL,
+	[TIENE_E_SE] [varchar](50) NULL,
+	[TIENE_E_TC_AGRO] [varchar](50) NULL,
+	[TIENE_E_TC_CORPO] [varchar](50) NULL,
+	[TIENE_E_TC_FLOTA] [varchar](50) NULL,
+	[SALDO_COMPUTO_SIST_2] [varchar](50) NULL,
+	[SALDO_COMPUTO_SIST_CC_MB] [varchar](50) NULL,
+	[SALDO_COMPUTO_SIST_CA_P] [varchar](50) NULL,
+	[SALDO_COMPUTO_SIST_CC_P] [varchar](50) NULL,
+	[SALDO_COMPUTO_SIST_FCI] [varchar](50) NULL,
+	[CROSS_EMPR] [varchar](50) NULL,
+	[CROSS_IND] [varchar](50) NULL
+) ON [PRIMARY]
+GO
